@@ -1,2 +1,1 @@
-http://download.microsoft.com/download/B/1/0/B102AB56-BB7E-4BCF-9D80-1278A029F95A/MSFT_logo_png.png
-
+http://filmfork-cdn.s3.amazonaws.com/content/TopGun1.jpg
