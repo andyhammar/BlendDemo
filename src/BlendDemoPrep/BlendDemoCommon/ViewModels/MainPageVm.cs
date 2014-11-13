@@ -27,8 +27,8 @@ namespace XamlDemoCommon.ViewModels
             return new ItemVmi
             {
                 Title = item.Title.Text,
-                Description = item.Content.Text,
-                ImageUri = item.ItemUri.AbsoluteUri
+                Description = item.Summary.Text,
+                Date = item.PublishedDate.ToString("HH:mm")
             };
         }
     }

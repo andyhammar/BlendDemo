@@ -30,7 +30,9 @@ namespace BlendDemoPrep
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = new MainPageVm();
+            var mainPageVm = new MainPageVm();
+            mainPageVm.InitAsync();
+            DataContext = mainPageVm;
             base.OnNavigatedTo(e);
         }
     }
