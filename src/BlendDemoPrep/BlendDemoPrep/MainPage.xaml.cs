@@ -38,7 +38,7 @@ namespace BlendDemoPrep
 
         private void path_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	MoveGreenThing.Begin();
+        	
         }
     }
 }
