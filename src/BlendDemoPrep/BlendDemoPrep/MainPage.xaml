@@ -21,9 +21,19 @@
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="Button">
-						<Grid>
+						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+							<Grid.RenderTransform>
+								<CompositeTransform/>
+							</Grid.RenderTransform>
 							<VisualStateManager.VisualStateGroups>
 								<VisualStateGroup x:Name="CommonStates">
+									<VisualStateGroup.Transitions>
+										<VisualTransition GeneratedDuration="0:0:0.5" To="Pressed">
+											<VisualTransition.GeneratedEasingFunction>
+												<BackEase EasingMode="EaseOut"/>
+											</VisualTransition.GeneratedEasingFunction>
+										</VisualTransition>
+									</VisualStateGroup.Transitions>
 									<VisualState x:Name="Normal"/>
 									<VisualState x:Name="PointerOver">
 										<Storyboard>
@@ -43,6 +53,8 @@
 											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
 												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
 											</ObjectAnimationUsingKeyFrames>
+											<DoubleAnimation Duration="0" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+											<DoubleAnimation Duration="0" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
 										</Storyboard>
 									</VisualState>
 									<VisualState x:Name="Disabled">
@@ -119,6 +131,14 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Storyboard x:Name="MoveGreenThing" AutoReverse="True" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="path">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-11"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="9"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</Page.Resources>
 
     <Grid Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
@@ -134,14 +154,20 @@
     	<Grid Grid.Column="1">
     		<Grid.ColumnDefinitions>
     			<ColumnDefinition/>
+    			<ColumnDefinition Width="80"/>
     			<ColumnDefinition Width="20"/>
     			<ColumnDefinition Width="Auto"/>
     		</Grid.ColumnDefinitions>
     		<TextBlock Text="{Binding Title}" Style="{StaticResource AppTextBlockStyle}" FontFamily="Global User Interface"/>
 
-    		<Button HorizontalAlignment="Right" Grid.Column="2" Style="{StaticResource AppButtonStyle1}">
+    		<Button HorizontalAlignment="Right" Grid.Column="3" Style="{StaticResource AppButtonStyle1}">
     			<SymbolIcon Symbol="PostUpdate"/>
     		</Button>
+    		<Path x:Name="path" Grid.Column="1" Data="M48.5,14.5 C46.2909,14.5 44.5,16.2909 44.5,18.5 C44.5,20.7091 46.2909,22.5 48.5,22.5 C50.7091,22.5 52.5,20.7091 52.5,18.5 C52.5,16.2909 50.7091,14.5 48.5,14.5 z M35,0.5 C51.6721,0.5 65.5821,12.1546 68.7991,27.6478 L68.9452,28.3996 L67.667,28 L65.333,32.0001 L61.667,30.6668 L58.667,34.6669 L53.333,32.6667 L53.333,37.9999 L47.333,35.3332 L46.333,39.9999 L45.333,46.3332 L50.333,42.6668 L51.667,47.3336 L54.333,42.3338 L55.333,47.0005 L59.333,44.6672 L61.333,50.6674 L66,47.0003 L66.5904,48.1813 L66.4524,48.4923 C61.0397,60.2905 48.9926,68.5 35,68.5 C15.9462,68.5 0.5,53.2777 0.5,34.5 C0.5,15.7223 15.9462,0.5 35,0.5 z" Fill="#FF56A256" HorizontalAlignment="Left" Height="69" Margin="7,16,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="69.445" RenderTransformOrigin="0.5,0.5" Tapped="path_Tapped">
+    			<Path.RenderTransform>
+    				<CompositeTransform/>
+    			</Path.RenderTransform>
+    		</Path>
 
     	</Grid>
     	<GridView Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource AppItemTemplate}" ItemsSource="{Binding Items}" IsSwipeEnabled="False" SelectionMode="Single" ItemContainerStyle="{StaticResource AppGridViewItemStyle1}"/>
