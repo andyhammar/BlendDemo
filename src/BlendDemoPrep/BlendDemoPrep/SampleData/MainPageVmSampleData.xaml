@@ -1,4 +1,4 @@
-﻿<ViewModels:MainPageVm xmlns:ViewModels="using:XamlDemoCommon.ViewModels" Title="Cras class">
+﻿<ViewModels:MainPageVm xmlns:ViewModels="using:XamlDemoCommon.ViewModels" Title="Pellentesque phasellus cras nam integer consequat consectetuer praesent accumsan vestibulum adipiscing quisque parturient duis vivamus convallis bibendum dignissim dictumst class nunc sed amet suspendisse elementum aliquam aenean aliquet ante arcu mauris pellentesque eleifend condimentum facilisi curae donec etiam fusce vestibulum dis diam est sollicitudin blandit commodo eget">
 	<ViewModels:MainPageVm.Items>
 		<ViewModels:ItemVmi Description="Sed duis" ImageUri="Dis curae phasellus integer" Title="Nam aliquam curabitur"/>
 		<ViewModels:ItemVmi Description="Maecenas praesent" ImageUri="Quisque aenean" Title="Consequat convallis dignissim nunc est"/>

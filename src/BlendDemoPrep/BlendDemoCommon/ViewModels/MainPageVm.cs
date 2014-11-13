@@ -11,9 +11,13 @@ namespace XamlDemoCommon.ViewModels
         public string Title { get; set; }
         public IList<ItemVmi> Items { get; set; }
 
-        public async Task InitAsync()
+        public MainPageVm()
         {
             Title = "main page title";
+        }
+
+        public async Task InitAsync()
+        {
             var feedItems = await new DataService().GetAsync();
             Items = feedItems.Select(CreateItemVmi).ToList();
         }

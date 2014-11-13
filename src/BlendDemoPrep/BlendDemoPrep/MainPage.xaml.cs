@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using XamlDemoCommon.ViewModels;
 
 namespace BlendDemoPrep
 {
@@ -25,6 +26,12 @@ namespace BlendDemoPrep
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = new MainPageVm();
+            base.OnNavigatedTo(e);
         }
     }
 }
