@@ -1,0 +1,14 @@
+﻿<ViewModels:MainPageVm xmlns:ViewModels="using:XamlDemoCommon.ViewModels" Title="Cras class">
+	<ViewModels:MainPageVm.Items>
+		<ViewModels:ItemVmi Description="Sed duis" ImageUri="Dis curae phasellus integer" Title="Nam aliquam curabitur"/>
+		<ViewModels:ItemVmi Description="Maecenas praesent" ImageUri="Quisque aenean" Title="Consequat convallis dignissim nunc est"/>
+		<ViewModels:ItemVmi Description="Vivamus hac nullam" ImageUri="Aptent facilisis leo aliquam mus" Title="Elementum mauris"/>
+		<ViewModels:ItemVmi Description="Auctor amet adipiscing parturient non" ImageUri="Fermentum congue etiam per cursus" Title="Nec donec accumsan vestibulum"/>
+		<ViewModels:ItemVmi Description="Commodo lectus" ImageUri="Conubia libero" Title="Vestibulum bibendum aliquet dictum blandit"/>
+		<ViewModels:ItemVmi Description="Vestibulum ante ligula arcu" ImageUri="Diam litora eget dictumst" Title="Fusce cubilia fringilla habitasse"/>
+		<ViewModels:ItemVmi Description="Luctus parturient elit hendrerit eleifend" ImageUri="Himenaeos sem dapibus" Title="Lorem sed adipiscing"/>
+		<ViewModels:ItemVmi Description="Imperdiet magnis" ImageUri="Mattis nam egestas" Title="Morbi sit vel facilisi"/>
+		<ViewModels:ItemVmi Description="Nulla faucibus mollis vestibulum habitant" ImageUri="Inceptos interdum" Title="Euismod malesuada mauris"/>
+		<ViewModels:ItemVmi Description="Feugiat gravida" ImageUri="Lobortis sed" Title="Enim penatibus porttitor tincidunt"/>
+	</ViewModels:MainPageVm.Items>
+</ViewModels:MainPageVm>

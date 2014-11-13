@@ -21,6 +21,8 @@
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBlock TextWrapping="Wrap" Text="TextBlock" Grid.Column="1" VerticalAlignment="Center" FontFamily="Segoe WP" FontSize="36" Foreground="{StaticResource AppBlueBrush}"/>
+
         <Button Content="Button" FontFamily="Global User Interface" Grid.Column="1" HorizontalAlignment="Right"/>
 
     </Grid>
