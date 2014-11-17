@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Web.Syndication;
@@ -35,7 +36,8 @@ namespace BlendDemoCommon.SampleData
             {
                 Title = title,
                 Description = description,
-                ImageUri = imageUri
+                ImageUri = imageUri,
+                Date = DateTime.Now.ToString("t")
             };
         }
     }
