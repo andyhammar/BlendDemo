@@ -5,8 +5,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core" xmlns:Media="using:Microsoft.Xaml.Interactions.Media"
+    xmlns:SampleData="using:BlendDemoCommon.SampleData"
     x:Class="BlendDemoPrep.MainPage"
-    mc:Ignorable="d" d:DataContext="{d:DesignData /SampleData/MainPageVmSampleData.xaml}">
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance SampleData:MainPageVmSampleData, IsDesignTimeCreatable=True}">
 	<Page.Resources>
 		<Style x:Key="AppButtonStyle1" TargetType="Button">
 			<Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}"/>
