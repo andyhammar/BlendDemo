@@ -3,8 +3,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.Web.Syndication;
 using BlendDemoCommon.Services;
+using BlendDemoCommon.ViewModels;
 
-namespace BlendDemoCommon.ViewModels
+namespace BlendDemoCommon.SampleData
 {
     public class MainPageVm : VmBase
     {

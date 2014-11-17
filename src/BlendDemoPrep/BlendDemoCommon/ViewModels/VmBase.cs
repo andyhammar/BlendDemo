@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace XamlDemoCommon.ViewModels
+namespace BlendDemoCommon.ViewModels
 {
     public class VmBase : INotifyPropertyChanged
     {

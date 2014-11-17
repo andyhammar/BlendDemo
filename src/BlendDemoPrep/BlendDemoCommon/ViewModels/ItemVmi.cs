@@ -1,4 +1,4 @@
-﻿namespace XamlDemoCommon.ViewModels
+﻿namespace BlendDemoCommon.ViewModels
 {
     public class ItemVmi
     {
